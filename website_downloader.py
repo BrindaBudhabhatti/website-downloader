@@ -5,7 +5,6 @@ import os
 
 url = "https://cyber-wise-pi.vercel.app/"
 
-
 # Send a get request
 r = requests.get(url)
 
@@ -20,17 +19,6 @@ for i in soup.find_all("a", href=True):
 
 print("links found: ")
 print(links)
-
-# # Download Pages
-
-# # Make Dir
-# os.mkdir(f'Downloade_{url}_by_b')
-
-# for i in links: 
-
-#     # with open(f"Downloade_{url}_by_b/")
-
-# ------------------------------------------------------- 
 
 # Download Pages
 
