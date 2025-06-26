@@ -3,10 +3,14 @@ from bs4 import BeautifulSoup
 from urllib.parse import urlparse, urljoin
 import os
 
-url = "https://cyber-wise-pi.vercel.app/"
+url = input('Enter Website URL to Download: ')
 
 # Send a get request
-r = requests.get(url)
+try:
+    r = requests.get(url)
+except:
+    print(f'Cannot send GET Requests to the {url}')
+
 
 soup = BeautifulSoup(r.content, "html.parser")
 
